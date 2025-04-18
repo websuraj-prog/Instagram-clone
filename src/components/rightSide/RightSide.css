@@ -1,0 +1,221 @@
+.rightHomeSide {
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+    margin-left: 10px;
+}
+
+.topProfileRight {
+    display: flex;
+}
+
+.imageDivRightSide {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.profileImageRight {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usernameRight {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.fullname {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #8e8e8e;
+}
+
+.switchButton {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 70px;
+}
+
+.switchButton:hover {
+    color: #3d4e56;
+}
+
+.bottomRightSide {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.suggestedBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.suggestedForYou {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8e8e8e;
+}
+
+.seeAll {
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 165px;
+}
+
+.followBlocks {
+    display: flex;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.imagefollowblock {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.suggestedImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #dbdbdb;
+}
+
+.suggestedUsername {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.followsuggest {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.followButton {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: -20px;
+}
+
+.followButton:hover {
+    color: #3d4e56;
+}
+
+.followButton1 {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: -5px;
+}
+
+.followButton1:hover {
+    color: #3d4e56;
+}
+
+.followButton2 {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 0;
+}
+
+.followButton2:hover {
+    color: #3d4e56;
+}
+
+.followButton3 {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 42px;
+}
+
+.followButton3:hover {
+    color: #3d4e56;
+}
+
+.followButton4 {
+    border: none;
+    color: #0095f6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.followButton4:hover {
+    color: #3d4e56;
+}
+
+.footerRightblock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.footerRight {
+    font-size: 12px;
+    font-weight: 500;
+    color: #c6c4c4f3;
+}
+
+.footerRight:hover {
+    text-decoration: underline;
+}
+
+.footerMeta {
+    font-size: 12px;
+    font-weight: 500;
+    color: #c6c4c4f3;
+    padding-top: 20px;
+
+}
+

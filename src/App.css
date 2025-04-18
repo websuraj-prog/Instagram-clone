@@ -1,0 +1,35 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.App {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.leftSideHome {
+    flex: 16%;
+    padding: 40px 22px;
+}
+
+.middleSide {
+    flex: 54%;
+    flex-direction: column;
+    border-left: 1px solid #dbdbdb;
+}
+
+.rightSideHome {
+    flex: 30%;
+}
+
+
+
+    
