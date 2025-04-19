@@ -1,32 +1,487 @@
-.form-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-field {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-btn:hover {
-    background-color: #0056b3;
-  }
-  
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.login-box {
+  background-color: black;
+  border: 1px solid #262626;
+  padding: 10px;
+  width: 100%;
+  max-width: 330px;
+  height: 400px;
+  text-align: center;
+  margin-top: 4rem;
+  margin-right: 9rem;
+
+}
+
+.login-logo {
+  font-family: 'Billabong', cursive;
+  width: 180px;
+  color: white;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-input {
+  background-color: #111;
+  border: 1px solid #444;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 80%;
+  margin-left: 1.5rem;
+}
+
+.login-button {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 85%;
+  margin-left: 1.6rem;
+}
+
+.login-button:hover {
+  background-color: #1877f2;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #8e8e8e;
+}
+
+.divider hr {
+  flex-grow: 1;
+  height: 1px;
+  border: none;
+  background-color: #262626;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+.facebook-login {
+  background: none;
+  color: #0095f6;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.forgot-password {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #8e8e8e;
+}
+
+.signup-box {
+  background-color: black;
+  border: 1px solid #262626;
+  padding: 10px;
+  width: 100%;
+  max-width: 330px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-right: 9rem;
+  color: #ccc;
+  font-size: 0.90rem;
+}
+
+.signup-box a {
+  color: #0095f6;
+  font-weight: 500;
+  font-size: 0.90rem;
+}
+
+.get-the-app {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.get-the-app p {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+
+/* signup page css */
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-family: 'Helvetica', sans-serif;
+  min-height: 100vh;
+
+}
+
+.signup-page-box {
+  width: 340px;
+  height: 80vh;
+  border: 1px solid #262626;
+  background-color: black;
+  text-align: center;
+  margin-top: -1.8rem;
+  margin-right: 10px;
+
+}
+
+.signup-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.signup-container {
+  background-color: black;
+  border: 1px solid #262626;
+  padding: 10px;
+  width: 100%;
+  max-width: 330px;
+  height: 80vh;
+  max-height: 100vh;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 38%;
+  overflow-y: auto;
+}
+
+
+/* Instagram logo */
+.signup-title {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Info text below logo */
+.signup-info-text {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Input fields */
+.signup-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.75rem;
+  background-color: #000;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.signup-input:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.signup-button {
+  width: 100%;
+  background-color: #0095f6;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: #1877f2;
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #333;
+}
+
+.divider span {
+  margin: 0 1rem;
+  color: #888;
+  font-size: 0.75rem;
+}
+
+/* Error message */
+.error-text {
+  color: #ff4d4f;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Login link section */
+.login-link-container {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.login-link {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+.store-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: -2rem;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.Mobileholder {
+  padding-bottom: 95px;
+  margin-left: 95px;
+}
+
+.slider-image {
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 2.5rem;
+  right: 630px;
+  transform: translateX(-50%);
+  padding: 15px;
+}
+
+.footermetadata {
+  margin-top: 4rem;
+  color: #8e8e8e;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: -450px;
+}
+
+.footerdata {
+  color: #8e8e8e;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: -450px;
+  padding-top: 15px;
+}
+
+.logo-text {
+  font-family: 'Billabong', cursive;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #8e8e8e;
+  margin: 10px 40px 20px 40px;
+  font-weight: 550;
+
+}
+
+.fb-button {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 0;
+  font-weight: bold;
+  width: 80%;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.divider span {
+  margin: 0 10px;
+  color: #8e8e8e;
+  font-size: 13px;
+}
+
+.signup-form input {
+  width: 70%;
+  padding: 9px 8px;
+  margin-bottom: 8px;
+  border: 1px solid #444;
+  border-radius: 3px;
+  background-color: #111;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.signup-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 0;
+  width: 80%;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.terms {
+  font-size: 11px;
+  color: #8e8e8e;
+  margin: 10px 40px 20px 40px;
+}
+
+.terms b {
+  color: #d1dae0;
+  cursor: pointer;
+}
+
+.signup-info-text {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin: 10px 40px 20px 40px;
+}
+
+.signup-info-text b {
+  color: #d1dae0;
+  cursor: pointer;
+}
+
+
+.login-redirect {
+  width: 320px;
+  height: 50px;
+  border: 1px solid #262626;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: black;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-redirect a {
+  color: #0095f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.signup-logo {
+  width: 175px;
+  height: 51px;
+  margin-top: 50px;
+} 
+
+.get-app-section {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.store-buttons img {
+  width: 130px;
+}
+
+.footer-meta {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.lang-select {
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #8e8e8e;
+}

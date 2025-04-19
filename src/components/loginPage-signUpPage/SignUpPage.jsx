@@ -1,64 +1,141 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import InstagramLogo from "../../assets/instagram-logo.png";
+import MicrosoftLogo from "../../assets/microsoft_logo.png";
 import "./Login-SignUp.css";
 
 const SignUpPage = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSignUp = (e) => {
     e.preventDefault();
-    // Logic for signup
-    navigate("/home");
+
+    if (!email || !fullName || !username || !password) {
+      setError("All fields are required.");
+      return;
+    }
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const userExists = users.some(
+      (u) => u.username === username || u.email === email
+    );
+
+    if (userExists) {
+      setError("Email or username already exists.");
+      return;
+    }
+
+    const newUser = { email, fullName, username, password };
+    localStorage.setItem("users", JSON.stringify([...users, newUser]));
+
+    alert("Signup successful!");
+    navigate("/login");
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={handleSignUp}
-        className="bg-white p-10 rounded-lg shadow-lg w-96"
-      >
-        <h2 className="text-3xl font-semibold text-center text-blue-500 mb-6">
-          Instagram
-        </h2>
+    <div className="signup-wrapper">
+      <div className="signup-page-box">
+       <img src={InstagramLogo} alt="InstagramLogo" className="signup-logo" />
+        <p className="tagline">Sign up to see photos and videos from your friends.</p>
 
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 mb-6 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600"
-        >
-          Sign Up
-        </button>
+        <button className="fb-button" onClick={() => window.location.href = "https://www.facebook.com/login.php"}>
+            Log in with Facebook</button>
 
-        <div className="text-center mt-4 text-sm text-gray-500">
-          <p>Already have an account? <a href="/login" className="text-blue-500 font-semibold">Log in</a></p>
+        <div className="divider">
+          <div className="line" />
+          <span>OR</span>
+          <div className="line" />
         </div>
-      </form>
+
+        <form onSubmit={handleSignUp} className="signup-form">
+          <input
+            type="email"
+            placeholder="Mobile Number or Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          {error && <p className="error">{error}</p>}
+
+          <p className="signup-info-text">
+            People who use our service may have uploaded your contact information to Instagram.<b> Learn More</b>
+          </p>
+
+        <p className="terms">
+          By signing up, you agree to our <b>Terms</b>, <b>Privacy Policy</b> and <b>Cookies Policy</b>.
+        </p>
+          <button type="submit" className="signup-btn">
+            Sign up
+          </button>
+        </form>
+
+      </div>
+
+      <div className="login-redirect">
+        Have an account? <a href="/login">Log in</a>
+      </div>
+      <div className="get-app-section">
+        <p>Get the app.</p>
+        <div className="store-buttons">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+            alt="Google Play"
+          />
+          <img
+            src={MicrosoftLogo}
+            alt="Microsoft Store"
+          />
+        </div>
+      </div>
+
+      <div className="footer-meta">
+        <div className="footer-links">
+          <span>About</span>
+          <span>Blog</span>
+          <span>Jobs</span>
+          <span>Help</span>
+          <span>API</span>
+          <span>Privacy</span>
+          <span>Terms</span>
+          <span>Top Accounts</span>
+          <span>Hashtags</span>
+          <span>Locations</span>
+          <span>Instagram Lite</span>
+          <span>Contact Uploading & Non-Users</span>
+        </div>
+        <div className="footer-bottom">
+          <select className="lang-select">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Marathi</option>
+            <option>Gujarati</option>
+          </select>
+          <p>© 2025 Instagram from Meta</p>
+        </div>
+      </div>
     </div>
   );
 };

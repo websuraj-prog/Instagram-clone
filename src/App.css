@@ -2,9 +2,8 @@ html, body {
     min-height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
-
 
 .App {
     padding: 0;
@@ -13,6 +12,8 @@ html, body {
     display: flex;
     height: 100vh;
     overflow: hidden;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .leftSideHome {
@@ -24,12 +25,10 @@ html, body {
     flex: 54%;
     flex-direction: column;
     border-left: 1px solid #dbdbdb;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .rightSideHome {
     flex: 30%;
 }
-
-
-
-    
