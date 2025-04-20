@@ -1,0 +1,136 @@
+.profile-page {
+  max-width: 935px;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+/* Top section */
+.top-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+  color: black;
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.top-row h2 {
+  font-size: 1.6rem;
+}
+
+.top-row button {
+  padding: 0.4rem 1rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  color: black;
+}
+
+.bio p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: black;
+}
+
+.bio a {
+  color: #00376b;
+  font-size: 0.9rem;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  overflow-x: auto;
+  gap: 3rem;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.highlight {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.highlight img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+}
+
+.highlight span {
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.4rem;
+  color: black;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tabs span {
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.active-tab {
+  border-bottom: 1.5px solid black;
+}
+
+/* Post Grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+}
+
+.post-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.post-grid img:hover {
+  transform: scale(1.02);
+}

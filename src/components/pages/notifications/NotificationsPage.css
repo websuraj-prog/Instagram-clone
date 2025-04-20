@@ -1,0 +1,109 @@
+.notifications-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  background-color: white;
+  font-family: sans-serif;
+}
+
+.notifications-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.notification-section {
+  margin-top: 20px;
+}
+
+.notification-section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.notification-left {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  align-items: center;
+  min-width: 0; /* Important for flex children to shrink properly */
+}
+
+.notification-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.notification-text {
+  display: flex;
+  flex-direction: column;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.notification-message {
+  font-size: 14px;
+  color: #000;
+}
+
+.notification-message strong {
+  font-weight: 600;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 2px;
+}
+
+.notification-preview,
+.notification-follow-btn {
+  flex-shrink: 0;
+}
+
+.notification-preview {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.notification-follow-btn {
+  background-color: #0095f6;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.notification-follow-btn:hover {
+  background-color: #0077b5;
+}
+
+.notification-follow-btn:active {
+  background-color: #0062a0;
+}
+
+.notification-section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0 10px;
+}
