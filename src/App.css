@@ -32,3 +32,39 @@ html, body {
 .rightSideHome {
     flex: 30%;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .App {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+    .leftSideHome,
+    .middleSide,
+    .rightSideHome {
+        flex: none;
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+    }
+    .middleSide {
+        border-left: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .App {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+    .leftSideHome,
+    .middleSide,
+    .rightSideHome {
+        flex: none;
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+    }
+}

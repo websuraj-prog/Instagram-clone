@@ -321,3 +321,81 @@
   }  
   
   
+/* Responsive */
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .chat-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .chat-list {
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .chat-messages {
+    padding: 10px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  .chat-input input {
+    font-size: 12px;
+  }
+
+  .chat-input button {
+    font-size: 12px;
+  }
+
+  .message-input input {
+    font-size: 12px;
+  }
+
+  .message-input button {
+    font-size: 16px;
+  }
+
+  .chat-item {
+    padding: 8px;
+  }
+
+  .chat-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .chat-name {
+    font-size: 12px;
+  }
+
+  .chat-preview {
+    font-size: 10px;
+  }
+
+  .chat-time {
+    font-size: 8px;
+  }
+
+  .chat-bubble {
+    font-size: 12px;
+  }
+
+  .chat-bubble.sent {
+    font-size: 14px;
+  }
+
+  .chat-bubble.received {
+    font-size: 14px;
+  }
+  
+  
+
+}

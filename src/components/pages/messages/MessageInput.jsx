@@ -7,7 +7,6 @@ const MessageInput = () => {
 
   const handleSend = () => {
     if (message.trim()) {
-      // Normally you'd send the message here (to a server or state)
       console.log("Sent message:", message);
       setMessage('');
     }

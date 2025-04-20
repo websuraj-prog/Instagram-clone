@@ -107,3 +107,33 @@
   color: #000;
   margin: 20px 0 10px;
 }
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .notifications-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .notification-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .notification-left {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .notification-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .notification-text {
+    font-size: 12px;
+  }
+
+  
+}

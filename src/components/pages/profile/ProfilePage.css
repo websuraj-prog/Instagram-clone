@@ -134,3 +134,56 @@
 .post-grid img:hover {
   transform: scale(1.02);
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: 100px;
+    
+  }
+  
+  .top-row button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+
+  .stats {
+    justify-content: center;
+  }
+
+  .highlights {
+    gap: 1rem;
+  }
+
+  .highlight img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tabs {
+    gap: 1.5rem;
+
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+}

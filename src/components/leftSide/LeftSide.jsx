@@ -58,9 +58,9 @@ const LeftSide = () => {
             <div className="navLinkPart">
                 <div className="navlink">
                     <HomeFilledIcon sx={{ fontSize: 30, margin: '0 13px 0 0'  }} /> 
-                    <div className="navname">Home</div>
+                    <div className="navName">Home</div>
                 </div>
-                <div className="navlink" onClick={handleSearchClick}>
+                <div className="navlink hide-on-mobile" onClick={handleSearchClick}>
                     <SearchIcon sx={{ fontSize: 32, margin: '0 13px 0 0'  }} /> 
                     <div className="navName">Search</div>
                 </div>
@@ -88,15 +88,15 @@ const LeftSide = () => {
                 <img className="ProfileIcon" src={ProfileIcone} alt="Profile" /> 
                     <div className="navName">Profile</div>
                 </div>
-                <div className="navlink" onClick={handleAIStudioClick}>
+                <div className="navlink hide-on-mobile" onClick={handleAIStudioClick}>
                     <PhotoFilterIcon sx={{ fontSize: 28, margin: '0 13px 0 0'  }} /> 
                     <div className="navName">AI Studio</div>
                 </div>
-                <div className="navlink">
+                <div className="navlink hide-on-mobile">
                 <img className="ThreadsIcon" src={ThreadsIcon} alt="Threads" /> 
                     <div className="navName">Threads</div>
                 </div>
-                <div className="navlink" onClick={handleMoreClick}>
+                <div className="navlink hide-on-mobile" onClick={handleMoreClick}>
                     <MenuIcon sx={{ fontSize: 28, margin: '0 13px 0 0'  }} /> 
                     <div className="navName">More</div>
                 </div>

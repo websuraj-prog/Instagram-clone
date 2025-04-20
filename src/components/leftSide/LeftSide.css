@@ -1,55 +1,140 @@
 .LeftSidePart {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
-    overflow: hidden;
-}
-
-.logoPart {
+    width: 220px;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .logoPart {
     width: 103px;
     height: 32px;
-}
-
-.logoImg {
+  }
+  
+  .logoImg {
     width: 100%;
     padding-left: 2px;
-
-}
-
-.navLinkPart {
+  }
+  
+  /* Navigation Links */
+  .navLinkPart {
     display: flex;
     flex-direction: column;
     margin-top: 38px;
-}
-
-.navlink {
+  }
+  
+  .navlink {
     display: flex;
-    height: 30px;
     align-items: center;
     border-radius: 5px;
     margin-bottom: 27px;
     cursor: pointer;
-    &:hover {
-        background-color: #ededed;
-    }
-}
-
-.navname {
+    height: 30px;
+  }
+  
+  .navlink:hover {
+    background-color: #ededed;
+  }
+  
+  .navname {
     font-weight: 700;
     font-size: 16px;
-}
-
-.MassegesIcon {
+  }
+  
+  .MassegesIcon,
+  .ProfileIcon,
+  .ThreadsIcon {
     margin: 0 17px 0 0;
     width: 23px;
-}
-
-.ProfileIcon {
-    margin: 0 17px 0 0;
-    width: 23px;
+  }
+  
+  .ProfileIcon {
     border-radius: 50%;
-}
+  }
+  
+  /* =======================
+     🔽 Mobile Responsive Fix
+     ======================= */
+  @media screen and (max-width: 768px) {
+    .LeftSidePart {
+      top: auto;
+      bottom: 0;
+      height: 60px;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      border-top: 1px solid #ddd;
+      border-right: none;
+      padding: 0;
+    }
+  
+    .logoPart {
+      display: none;
+    }
+  
+    .navLinkPart {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 10px 0;
+        z-index: 1000;
+      }
 
-.ThreadsIcon {
-    margin: 0 16px 0 0;
-    width: 23px
-};
+  
+    .navlink {
+      flex-direction: column;
+      margin: 0;
+      height: auto;
+      justify-content: center;
+      
+    }
+  
+    .navName {
+      display: none;
+    }
+  
+    .MassegesIcon,
+    .ProfileIcon,
+    .ThreadsIcon {
+      margin-left: 5px;
+    }
+
+    .ProfileIcon {
+      border-radius: 50%;
+    }
+
+    .navlink:hover {
+      background-color: transparent;
+    }
+
+    .navlink.active {
+      background-color: #ededed;
+    }
+
+    .navlink.active .navName {
+      display: block;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+      }
+
+    
+   
+  }
+  

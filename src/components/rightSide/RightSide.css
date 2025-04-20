@@ -216,6 +216,18 @@
     font-weight: 500;
     color: #c6c4c4f3;
     padding-top: 20px;
-
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .rightHomeSide {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .rightHomeSide {
+        display: none;
+    }
+}

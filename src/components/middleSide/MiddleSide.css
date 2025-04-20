@@ -219,3 +219,63 @@
     object-fit: cover;
     border-radius: 5px;
 }
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    .PostBlockContainer {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+
+    .post {
+        margin-left: 0;
+    }
+
+    .post-image {
+        max-height: 300px;
+    }
+
+    .post-video {
+        max-height: 600px;
+    }
+
+    .comment-post-btn {
+        display: inline;
+    }
+
+    .comment-box {
+        margin-top: 10px;
+    }
+
+    .comment-box input {
+        margin-right: 0;
+    }
+
+    .comment-post-btn {
+        margin-left: 10px;
+    }
+
+    .StoryBlock-container {
+        margin-top: 10px;
+        width: 100%;
+        }
+
+    .scroll-arrow {
+        display: none;
+        }
+
+    .profile-pic {
+        width: 30px;
+        height: 30px;
+    }   
+
+    .username {
+        font-size: 13px;
+    }
+
+    .likes, .caption, .time {
+        font-size: 13px;
+    }
+}
