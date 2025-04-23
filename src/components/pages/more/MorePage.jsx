@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailForm from '../more/email/EmailForm';
 import './MorePage.css';
 import {
   Settings, HelpOutline, Info, Archive,
@@ -25,7 +26,12 @@ const MorePage = () => {
       <div className="section">
         <div className="option"><QrCode2 /> QR Code</div>
         <div className="option"><Settings /> Settings</div>
-        <div className="option"><HelpOutline /> Help</div>
+        <div className="option help-option">
+          <HelpOutline /> Help
+          <div className="EmailInfo">
+            <EmailForm />
+          </div>
+        </div>
         <div className="option"><Info /> About</div>
       </div>
 

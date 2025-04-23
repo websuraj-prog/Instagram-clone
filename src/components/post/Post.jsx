@@ -3,7 +3,6 @@ import { FaHeart,FaRegHeart,FaRegComment,FaShare,FaBookmark,FaRegBookmark } from
 import HaqSeSingle from '../../assets/haq-se-single-reel.mp4';
 
 export default function Post() {
-
   const defaultPosts = [
     {
       id: 1,
@@ -12,7 +11,7 @@ export default function Post() {
       postImage: '/src/assets/virat-story.png',
       likes: 120,
       caption: 'Enjoying the game!',
-      timeAgo: '2h'
+      timeAgo: '2h',
     },
     {
       id: 2,
@@ -21,7 +20,7 @@ export default function Post() {
       postImage: HaqSeSingle,
       likes: 450,
       caption: 'Wedding time!',
-      timeAgo: '2 Days ago'
+      timeAgo: '2 Days ago',
     },
     {
       id: 3,
@@ -30,7 +29,7 @@ export default function Post() {
       postImage: '/src/assets/srk-story.png',
       likes: 200,
       caption: 'Movie time!',
-      timeAgo: '3h'
+      timeAgo: '3h',
     },
     {
       id: 4,
@@ -39,19 +38,19 @@ export default function Post() {
       postImage: '/src/assets/harsh-story.png',
       likes: 90,
       caption: 'Sunset vibes',
-      timeAgo: '1h'
-    }
+      timeAgo: '1h',
+    },
   ];
 
   const [posts, setPosts] = useState(defaultPosts);
   const [likedPosts, setLikedPosts] = useState({});
   const [savedPosts, setSavedPosts] = useState({});
   const [comments, setComments] = useState({});
+  const [postedComments, setPostedComments] = useState({});
 
   const toggleLike = (id) => {
     setLikedPosts((prev) => {
       const isLiked = !prev[id];
-
       setPosts((posts) =>
         posts.map((post) =>
           post.id === id
@@ -71,6 +70,20 @@ export default function Post() {
     setComments((prev) => ({ ...prev, [id]: value }));
   };
 
+  const handlePostComment = (id) => {
+    if (!comments[id] || comments[id].trim() === '') return;
+
+    setPostedComments((prev) => ({
+      ...prev,
+      [id]: [...(prev[id] || []), comments[id]],
+    }));
+
+    setComments((prev) => ({
+      ...prev,
+      [id]: '',
+    }));
+  };
+
   const isVideo = (url) => {
     return url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.ogg');
   };
@@ -83,6 +96,7 @@ export default function Post() {
             <img className="profile-pic" src={post.profilePic} alt="Profile" />
             <span className="username">{post.username}</span>
           </div>
+
           {isVideo(post.postImage) ? (
             <video
               className="post-video"
@@ -95,6 +109,7 @@ export default function Post() {
           ) : (
             <img className="post-image" src={post.postImage} alt="Post" />
           )}
+
           <div className="post-actions">
             <div className="action-left">
               <span onClick={() => toggleLike(post.id)}>
@@ -115,11 +130,23 @@ export default function Post() {
               )}
             </span>
           </div>
+
           <div className="likes">{post.likes} likes</div>
           <div className="caption">
             <strong>{post.username}</strong> {post.caption}
           </div>
           <div className="time">{post.timeAgo}</div>
+
+          {/* Posted Comments */}
+          <div className="posted-comments">
+            {(postedComments[post.id] || []).map((cmt, idx) => (
+              <div key={idx} className="comment">
+                <strong>You</strong> {cmt}
+              </div>
+            ))}
+          </div>
+
+          {/* Comment Box */}
           <div className="comment-box">
             <input
               type="text"
@@ -131,6 +158,7 @@ export default function Post() {
               className={`comment-post-btn ${
                 comments[post.id] && comments[post.id].trim() !== '' ? 'active' : ''
               }`}
+              onClick={() => handlePostComment(post.id)}
             >
               Post
             </span>
@@ -139,4 +167,4 @@ export default function Post() {
       ))}
     </>
   );
-}
+};
