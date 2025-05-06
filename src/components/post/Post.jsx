@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaHeart,FaRegHeart,FaRegComment,FaShare,FaBookmark,FaRegBookmark } from 'react-icons/fa';
 import HaqSeSingle from '../../assets/haq-se-single-reel.mp4';
+import './Post.css';
 
 export default function Post() {
   const defaultPosts = [
@@ -47,6 +48,7 @@ export default function Post() {
   const [savedPosts, setSavedPosts] = useState({});
   const [comments, setComments] = useState({});
   const [postedComments, setPostedComments] = useState({});
+  const [likeAnim, setLikeAnim] = useState({});
 
   const toggleLike = (id) => {
     setLikedPosts((prev) => {
@@ -58,6 +60,11 @@ export default function Post() {
             : post
         )
       );
+      if (!isLiked) return { ...prev, [id]: isLiked };
+      setLikeAnim((prev) => ({ ...prev, [id]: true }));
+      setTimeout(() => {
+        setLikeAnim((prev) => ({ ...prev, [id]: false }));
+      }, 500);
       return { ...prev, [id]: isLiked };
     });
   };
@@ -112,7 +119,7 @@ export default function Post() {
 
           <div className="post-actions">
             <div className="action-left">
-              <span onClick={() => toggleLike(post.id)}>
+              <span onClick={() => toggleLike(post.id)} className={likeAnim[post.id] ? 'like-anim' : ''}>
                 {likedPosts[post.id] ? (
                   <FaHeart className="icon liked" />
                 ) : (

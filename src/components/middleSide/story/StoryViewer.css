@@ -1,4 +1,4 @@
-.StoryViewerOverlay {
+  .StoryViewerOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,14 @@
     justify-content: center;
     align-items: center;
     z-index: 999;
+    opacity: 0;
+    animation: fadeInOverlay 0.5s forwards;
+  }
+  
+  @keyframes fadeInOverlay {
+    to {
+      opacity: 1;
+    }
   }
   
   .StorySliderWrapper {
@@ -31,6 +39,16 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1 !important;
+  }
+  
+  .fade-out {
+    opacity: 0 !important;
   }
   
   .story-image {

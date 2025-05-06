@@ -12,11 +12,16 @@ const ReelsPage = () => {
     const [likes, setLikes] = useState({});
     const [saved, setSaved] = useState({});
     const [showMore, setShowMore] = useState({});
+    const [likeAnim, setLikeAnim] = useState({});
 
     const videosRef = useRef([]);
 
     const toggleLike = (id) => {
         setLikes(prev => ({ ...prev, [id]: !prev[id] }));
+        setLikeAnim(prev => ({ ...prev, [id]: true }));
+        setTimeout(() => {
+            setLikeAnim(prev => ({ ...prev, [id]: false }));
+        }, 500);
     };
 
     const toggleSave = (id) => {
@@ -45,7 +50,7 @@ const ReelsPage = () => {
     return (
         <div className="reels-page">
             {reelsData.map((reel, index) => (
-                <div className="reel" key={reel.id}>
+                <div className="reel fade-in" key={reel.id}>
                     <video
                         src={reel.videoUrl}
                         ref={(el) => (videosRef.current[index] = el)}
@@ -78,7 +83,7 @@ const ReelsPage = () => {
                     </div>
 
                     <div className="reel-actions">
-                        <div onClick={() => toggleLike(reel.id)}>
+                        <div onClick={() => toggleLike(reel.id)} className={likeAnim[reel.id] ? 'like-anim' : ''}>
                             {likes[reel.id] ? <FavoriteIcon color="error" /> : <FavoriteBorderIcon />}
                             <p>{likes[reel.id] ? reel.likes + 1 : reel.likes}</p>
                         </div>
