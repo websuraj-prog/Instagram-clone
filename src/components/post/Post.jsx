@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import { FaHeart,FaRegHeart,FaRegComment,FaShare,FaBookmark,FaRegBookmark } from 'react-icons/fa';
+import viratPic from '../../assets/virat-story.png';
 import HaqSeSingle from '../../assets/haq-se-single-reel.mp4';
+import HaqSeSingle2 from '../../assets/haq-se-single-story.png';
+import iamsrk from '../../assets/srk-story.png';
+import harshpic from '../../assets/harsh-story.png';
 import './Post.css';
 
 export default function Post() {
   const defaultPosts = [
     {
       id: 1,
-      profilePic: '/src/assets/virat-story.png',
+      profilePic: viratPic,
       username: 'virat.kohli',
-      postImage: '/src/assets/virat-story.png',
+      postImage: viratPic,
       likes: 120,
       caption: 'Enjoying the game!',
       timeAgo: '2h',
     },
     {
       id: 2,
-      profilePic: '/src/assets/haq-se-single-story.png',
+      profilePic: HaqSeSingle2,
       username: 'HaqSeSingle',
       postImage: HaqSeSingle,
       likes: 450,
@@ -25,18 +29,18 @@ export default function Post() {
     },
     {
       id: 3,
-      profilePic: '/src/assets/srk-story.png',
+      profilePic: iamsrk,
       username: 'iamsrk',
-      postImage: '/src/assets/srk-story.png',
+      postImage: iamsrk,
       likes: 200,
       caption: 'Movie time!',
       timeAgo: '3h',
     },
     {
       id: 4,
-      profilePic: '/src/assets/harsh-story.png',
+      profilePic: harshpic,
       username: '_harsh_01',
-      postImage: '/src/assets/harsh-story.png',
+      postImage: harshpic,
       likes: 90,
       caption: 'Sunset vibes',
       timeAgo: '1h',
