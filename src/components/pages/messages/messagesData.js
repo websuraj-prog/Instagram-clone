@@ -1,8 +1,17 @@
+import harshpic from '../../assets/harsh-story.png';
+import dipanshupic from '../../assets/dipanshu-story.png';
+import viratpic from '../../assets/virat-story.png';
+import srkpic from '../../assets/srk-story.png';
+import pandaypic from '../../assets/reels/panday-profile.jpg';
+import payalpic from '../../assets/payal-story.png';
+
+
 const messagesData = [
-    {
+
+  {
       id: 1,
       username: "_harsh_01",
-      profilePic: "/src/assets/harsh-story.png",
+      profilePic: harshpic,
       messages: [
         { from: "_harsh_01", text: "Hii Bhai kaisa hai?", time: "10:00 AM" },
         { from: "me", text: "Ekdum mst, tu bta kaisa hai?", time: "10:01 AM" },
@@ -18,7 +27,7 @@ const messagesData = [
     {
       id: 2,
       username: "dipanshu",
-      profilePic: "/src/assets/dipanshu-story.png",
+      profilePic: dipanshupic,
       messages: [
         { from: "dipanshu", text: "Are you coming today?", time: "9:30 AM" },
         { from: "me", text: "Yes, I’ll be there by 11.", time: "9:32 AM" },
@@ -42,7 +51,7 @@ const messagesData = [
     {
         id: 5,
         username: "pandey_kushal_0111",
-        profilePic: "/src/assets/reels/panday-profile.jpg",
+        profilePic: pandaypic,
         messages: [
             { from: "pandey_kushal_0111", text: "Hii bhai", time: "07:35 PM" },
         ],
@@ -50,7 +59,7 @@ const messagesData = [
     {
         id: 6,
         username: "payalgaming",
-        profilePic: "/src/assets/payal-story.png",
+        profilePic: payalpic,
         messages: [
             { from: "payalgaming", text: "Hii", time: "03:02 PM" },
         ],
