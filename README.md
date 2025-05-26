@@ -3,7 +3,7 @@
 An Instagram-like web application built with React.js, Node.js, and Express.js. Users can post photos, explore others’ content, like, comment, and more – all with a sleek UI.
 
 ## 🔗 Live Demo
-[Click here to view live](instagram-clone-xi-weld.vercel.app)
+[Click here to view live](https://instagram-clone-xi-weld.vercel.app/login)
 
 ---
 
