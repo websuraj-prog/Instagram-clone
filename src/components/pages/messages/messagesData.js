@@ -1,9 +1,9 @@
-import harshpic from '../../assets/harsh-story.png';
-import dipanshupic from '../../assets/dipanshu-story.png';
-import viratpic from '../../assets/virat-story.png';
-import srkpic from '../../assets/srk-story.png';
-import pandaypic from '../../assets/reels/panday-profile.jpg';
-import payalpic from '../../assets/payal-story.png';
+import harshpic from '../../../assets/harsh-story.png';
+import dipanshupic from '../../../assets/dipanshu-story.png';
+import viratpic from '../../../assets/virat-story.png';
+import srkpic from '../../../assets/srk-story.png';
+import pandaypic from '../../../assets/reels/panday-profile.jpg';
+import payalpic from '../../../assets/payal-story.png';
 
 
 const messagesData = [

@@ -1,6 +1,6 @@
 import vikaspic from '../../../assets/vikas-follow.png';
 import nehapic from '../../../assets/neha.jpg';
-import sunset from '../../../assets/sunset.jpg';
+import sunset from '../../../assets/sunset.jpeg';
 import amritapic from '../../../assets/amrita.jpg';
 import profilepic from '../../../assets/profile.png';
 import jivikapic from '../../../assets/jivika.png';
