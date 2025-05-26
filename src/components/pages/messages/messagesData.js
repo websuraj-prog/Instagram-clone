@@ -36,7 +36,7 @@ const messagesData = [
     {
       id: 3,
       username: "virat",
-      profilePic: "/src/assets/virat-story.png",
+      profilePic: viratpic,
       messages: [
         { from: "virat", text: "", time: "" },
       ],
@@ -44,7 +44,7 @@ const messagesData = [
     {
       id: 4,
       username: "srk",
-      profilePic: "/src/assets/srk-story.png",
+      profilePic: srkpic,
       messages: [
       ],
     },

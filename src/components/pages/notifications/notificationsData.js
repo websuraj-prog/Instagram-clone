@@ -1,7 +1,19 @@
+import vikaspic from '../../../assets/vikas-follow.png';
+import nehapic from '../../../assets/neha.jpg';
+import sunset from '../../../assets/sunset.jpg';
+import amritapic from '../../../assets/amrita.jpg';
+import profilepic from '../../../assets/profile.png';
+import jivikapic from '../../../assets/jivika.png';
+import cristino from '../../../assets/cristino-follow.png';
+import sarthakpic from '../../../assets/sarthak.jpg';
+import hemantpic from '../../../assets/hemant-follow.png';
+import ghiblipic from '../../../assets/ghibli.jpg';
+import apekshapic from '../../../assets/reels/apeksha-profile.jpg';
+
 const notificationsData = {
     'This week': [
       {
-        profilePic: '/src/assets/vikas-follow.png',
+        profilePic: vikaspic,
         message: "<strong>akashvishwakarma024482022</strong> started following you.",
         time: "4d",
         action: "follow",
@@ -9,39 +21,39 @@ const notificationsData = {
     ],
     'This month': [
       {
-        profilePic: '/src/assets/neha.jpg',
+        profilePic: nehapic,
         message: "<strong>neya___07</strong> and <strong>_amritttta_</strong> liked your story.",
         time: "6d",
-        image: '/src/assets/sunset.jpeg',
+        image: sunset,
       },
       {
-        profilePic: '/src/assets/amrita.jpg',
+        profilePic: amritapic,
         message: "<strong>_amritttta_, neya___07</strong> and others liked your story.",
         time: "6d",
-        image: '/src/assets/profile.png',
+        image: profilepic,
       },
       {
-        profilePic: '/src/assets/jivika.png',
+        profilePic: jivikapic,
         message: "<strong>jeevika__vishwakarma</strong> liked your post.",
         time: "1w",
-        image: '/src/assets/cristino-follow.png',
+        image: cristino,
       },
       {
-        profilePic: '/src/assets/sarthak.jpg',
+        profilePic: sarthakpic,
         message: "<strong>sarthak____101, sack___0333</strong> and others liked your story.",
         time: "2w",
-        image: '/src/assets/ghibli.jpg',
+        image: ghiblipic,
       },
     ],
     Earlier: [
       {
-        profilePic: '/src/assets/hemant-follow.png',
+        profilePic: hemantpic,
         message: "<strong>sanket.birwadkar.10, neya___07</strong> and <strong>_amritttta_</strong> liked your story.",
         time: "4w",
-        image: '/src/assets/ghibli.jpg',
+        image: ghiblipic,
       },
       {
-        profilePic: '/src/assets/reels/Apeksha-profile.jpg',
+        profilePic: apekshapic,
         message: "<strong>7934arpita</strong>, who you might know, is on Instagram.",
         time: "4w",
         action: "follow",
